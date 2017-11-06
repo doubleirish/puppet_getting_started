@@ -12,6 +12,7 @@ mkdir puptest
 cd puptest
 vagrant init puppetlabs/ubuntu-16.04-64-puppet   --box-version 1.0.0
 vagrant up
+vagrant ssh
 ```
 
 # understanding puppet bin paths
