@@ -16,7 +16,7 @@ vagrant init puppetlabs/ubuntu-16.04-64-puppet   --box-version 1.0.0
 vagrant up
 ```
 
-# bin paths
+# understanding puppet bin paths
 puppet v4.x has two locations where executables are stored
 
 a directory containing all the executables that are run in privlidged mode. e.g puppet, hiera,facter
@@ -38,7 +38,7 @@ Then add /opt/puppetlabs/bin to the superuser path
 
 After saving You will need to prefix subsequent puppet commands with "sudo"
 
-# create a simple puppet resource 
+# Create a simple puppet resource 
 The puppet file format for a resource e.g a file,package or service has the following general format
 ```
 resource { 'titleOrDefaultProperty' :
@@ -57,11 +57,13 @@ file { '/etc/motd':
   content => "Hello puppeteer!\n",
 }
 ```
-
+# Validate Puppet file
 It's a good idea to validate our puppet files before we run then
 ```
 puppet parser validate motd.pp
 ```
+
+# Execute Puppet file
 Puppet is  declaritive, we declare what the state should be and puppet decides what changes (if any) are required to get to that requested state.
 When we first  execute our puppet file ...
 ```
@@ -74,11 +76,11 @@ sudo puppet  apply motd.pp
 ```
 
  
-# organize 
+# TODO organize your puppet files
 mkdir -p puppet/manifests 
 
 
-#Node
+# TODO prep for Node
 puppet can push different configuration depending on the host or node.
 to make it easier to test this functinality we'll need to identify our vm with a hostname
 
