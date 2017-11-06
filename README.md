@@ -5,9 +5,7 @@ Getting started with puppet 4
 There is a vagrant VM you can use to get started quickly.
 It contains  puppet 4.5.x ready to go including all the supporting software such as ruby, rake openssl etc.
 
-```
-https://app.vagrantup.com/puppetlabs/boxes/ubuntu-16.04-64-puppet
-```
+[Vagrant VM for Puppet v4.5.x][https://app.vagrantup.com/puppetlabs/boxes/ubuntu-16.04-64-puppet]
 
 ```
 mkdir puptest
